@@ -1,26 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <hero-section></hero-section>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+import HeroSection from "./components/HeroSection.vue";
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+// .hevena {
+//   font-family: 'Hevena';
+// }
+
+// .hikasami {
+//   font-family: 'Hikasami';
+// }
+
+// .instrumental {
+//   font-family: 'Instrumental';
+// }
+
+// .neutral-regular {
+//   font-family: 'Neutral-Regular';
+// }
+
+// .neutral-medium {
+//   font-family: 'Neutral-Medium';
+// }
 </style>
