@@ -1,29 +1,12 @@
 <template>
   <hero-section></hero-section>
+  <the-main></the-main>
+  <the-footer></the-footer>
 </template>
 
 <script setup>
 import HeroSection from "./components/HeroSection.vue";
+import TheMain from "./components/layouts/TheMain.vue";
+import TheFooter from "./components/layouts/TheFooter.vue";
 </script>
 
-<style lang="scss">
-// .hevena {
-//   font-family: 'Hevena';
-// }
-
-// .hikasami {
-//   font-family: 'Hikasami';
-// }
-
-// .instrumental {
-//   font-family: 'Instrumental';
-// }
-
-// .neutral-regular {
-//   font-family: 'Neutral-Regular';
-// }
-
-// .neutral-medium {
-//   font-family: 'Neutral-Medium';
-// }
-</style>

@@ -7,7 +7,12 @@
       <li><a href="">Portfolio</a></li>
       <li><a href="">Contacts</a></li>
     </ul>
-    <base-button :backgroundColor="'#fff'">Get in touch</base-button>
+    <base-button class="call-to-action" :backgroundColor="'#fff'">Get in touch</base-button>
+    <div class="burger-container">
+      <button class="burger">
+        <img src="@/assets/images/burger.svg" alt="">
+      </button>
+    </div>
   </nav>
 </template>
 
@@ -32,10 +37,15 @@ nav {
 //   margin: 0 auto;
 }
 
+.burger-container {
+  display: none;
+}
+
 .logo {
   font-family: "Hikasami";
   color: #fff;
-  font-size: 2.6rem;
+  font-size: clamp(2rem, 2.2vw, 2.6rem);
+
   text-transform: uppercase;
 
   span {
@@ -59,4 +69,48 @@ ul:hover li a {
 ul li:hover a {
   color: #fff !important;
 }
+
+/* Стили для экранов шириной от 320px */
+@media (max-width: 320px) {
+
+}
+
+/* Стили для экранов шириной от 480px */
+@media (max-width: 480px) {
+  ul,
+  .call-to-action{
+    display: none;
+  }
+  .burger-container {
+    display: block;
+  }
+}
+
+/* Стили для экранов шириной от 768px (планшеты) */
+@media (max-width: 768px) {
+  ul,
+  .call-to-action{
+    display: none;
+  }
+  .burger-container {
+    display: block;
+  }
+}
+
+/* Стили для экранов шириной от 1024px (десктопы) */
+@media (max-width: 1024px) {
+  ul,
+  .call-to-action{
+    display: none;
+  }
+  .burger-container {
+    display: block;
+  }
+}
+
+/* Стили для экранов шириной от 1440px (очень большие экраны) */
+@media (max-width: 1440px) {
+
+}
+
 </style>

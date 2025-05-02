@@ -1,8 +1,13 @@
 <template>
-  <button :class="{ 'white-button': props.backgroundColor === '#fff', 'dark-button': props.backgroundColor !== '#fff' }"
+  <button
+    :class="{
+      'white-button': props.backgroundColor === '#fff',
+      'dark-button': props.backgroundColor !== '#fff',
+    }"
   >
     <slot></slot>
-    <svg v-if="props.backgroundColor === '#fff'"
+    <svg
+      v-if="props.backgroundColor === '#fff'"
       xmlns="http://www.w3.org/2000/svg"
       width="28"
       height="28"
@@ -16,7 +21,8 @@
       />
     </svg>
 
-    <svg v-else
+    <svg
+      v-else
       xmlns="http://www.w3.org/2000/svg"
       width="36"
       height="36"
@@ -33,20 +39,18 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps } from "vue";
 
 const props = defineProps({
-    backgroundColor: {
-        type: String,
-        required: true
-    },
-    color: {
-        type: String,
-        required: true
-    }
+  backgroundColor: {
+    type: String,
+    required: true,
+  },
+  color: {
+    type: String,
+    required: false,
+  },
 });
-
-
 </script>
 
 <style lang="scss" scoped>
@@ -67,7 +71,7 @@ button {
   padding: 10px 16px;
   border-radius: 24px;
 
-  font-family: 'Neutral-Medium';
+  font-family: "Neutral-Medium";
   font-size: 1.6rem;
   color: #0f0f0f;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -81,8 +85,6 @@ button:hover {
 button svg {
   transition: transform 0.3s ease;
 }
-
-
 
 button:hover svg {
   transform: rotate(-30deg);
