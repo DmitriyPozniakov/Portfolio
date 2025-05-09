@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper" id="stack">
     <div class="left">
       <div class="image-container"></div>
       <p class="my-info">

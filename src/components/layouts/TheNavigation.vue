@@ -2,10 +2,10 @@
   <nav>
     <p class="logo">Pozniakov<span>.</span></p>
     <ul>
-      <li><a href="">Home</a></li>
-      <li><a href="">Stack</a></li>
-      <li><a href="">Portfolio</a></li>
-      <li><a href="">Contacts</a></li>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#my-works">Portfolio</a></li>
+      <li><a href="#footer">Contacts</a></li>
     </ul>
     <base-button class="call-to-action" :backgroundColor="'#fff'">Get in touch</base-button>
     <div class="burger-container">

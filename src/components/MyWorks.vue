@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <div class="my-works">
+    <div id="my-works">
       <div class="heading-wrapper">
         <p class="heading">
           See My <span class="special">Work</span><span class="dot">.</span>
@@ -15,26 +15,44 @@
           <template #stack>Vue / Vuex / JavaScript / HTML5 / CSS3</template>
         </base-card>
 
-        <base-card :img-src="abain" :url="'https://dmitriypozniakov.github.io/abain/'">
+        <base-card
+          :img-src="abain"
+          :url="'https://dmitriypozniakov.github.io/abain/'"
+        >
           <template #heading>
             <p class="heading">Abain</p>
           </template>
           <template #stack>JavaScript / HTML5 / CSS3</template>
         </base-card>
 
-        <base-card :img-src="timeNow" :url="'https://dmitriypozniakov.github.io/Time-now/'">
+        <base-card
+          :img-src="timeNow"
+          :url="'https://dmitriypozniakov.github.io/Time-now/'"
+        >
           <template #heading>
             <p class="heading">TimeNow</p>
           </template>
           <template #stack>JavaScript / HTML5 / CSS3</template>
         </base-card>
 
-        <base-card :img-src="aiAgent" :url="'https://dmitriypozniakov.github.io/Ai-agent-landing-page/'">
+        <base-card
+          :img-src="aiAgent"
+          :url="'https://dmitriypozniakov.github.io/Ai-agent-landing-page/'"
+        >
           <template #heading>
             <p class="heading">Ai Agent</p>
           </template>
           <template #stack>JavaScript / HTML5 / CSS3</template>
         </base-card>
+
+        <base-card :img-src="Renoteck1" :url="'https://renoteck.netlify.app/'">
+          <template #heading>
+            <p class="heading">Renoteck</p>
+          </template>
+          <template #stack
+            >Vue / Vuex / JavaScript / HTML5 / SCSS / CSS3</template
+          ></base-card
+        >
       </div>
     </div>
   </div>
@@ -46,6 +64,7 @@ import dolas from "@/assets/images/dolas.png";
 import abain from "@/assets/images/Abain.png";
 import timeNow from "@/assets/images/TimeNow.png";
 import aiAgent from "@/assets/images/AiAgent.png";
+import Renoteck1 from "@/assets/images/Renoteck-1.png";
 </script>
 
 <style lang="scss" scoped>
@@ -53,10 +72,14 @@ import aiAgent from "@/assets/images/AiAgent.png";
 .wrapper {
   display: flex;
   justify-content: center;
-  padding-bottom: 100rem;
+  padding-bottom: 170rem;
+
+  @media (max-width: 1452px) {
+    padding-bottom: 300rem;
+  }
 }
 
-.my-works {
+#my-works {
   width: 95%;
   background: #fff;
   border-radius: 40px;

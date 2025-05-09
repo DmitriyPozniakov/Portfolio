@@ -1,7 +1,7 @@
 <template>
   <header>
     <the-navigation></the-navigation>
-    <div class="hero-article">
+    <div class="hero-article" id="hero">
       <div class="hero-text-container">
         <p class="hero-heading">
           <span id="typewriter-text">
@@ -17,7 +17,7 @@
         </p>
         <div class="buttons">
           <base-button :backgroundColor="'#fff'">Get in touch</base-button>
-          <a href="">View my portfolio</a>
+          <a href="#my-works">View my portfolio</a>
         </div>
       </div>
 

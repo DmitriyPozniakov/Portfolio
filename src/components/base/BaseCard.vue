@@ -33,6 +33,10 @@ defineProps({
     type: String,
     required: true,
   },
+  imgSrc2: {
+    type: String,
+    required: false,
+  },
   url: {
     type: String,
     required: true,
@@ -45,7 +49,8 @@ defineProps({
   padding: 30px 40px;
   border-radius: 48px;
   background: #1e1e1e;
-  height: 64rem;
+  // height: 64rem;
+  height: auto;
   width: clamp(32rem, 50vw, 64rem);
   flex-shrink: 0;
   flex-grow: 1;
@@ -57,7 +62,7 @@ defineProps({
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #333333; 
+    background-color: #333333;
   }
 
   img {
@@ -92,4 +97,5 @@ defineProps({
   align-items: center;
   margin-bottom: 20px;
 }
+
 </style>

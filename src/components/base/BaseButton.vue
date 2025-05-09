@@ -1,9 +1,10 @@
 <template>
+  <a href="#footer">
   <button
-    :class="{
-      'white-button': props.backgroundColor === '#fff',
-      'dark-button': props.backgroundColor !== '#fff',
-    }"
+    :class="[
+      props.backgroundColor === '#fff' ? 'white-button' : 'dark-button',
+      { 'no-hover': props.nonHover },
+    ]"
   >
     <slot></slot>
     <svg
@@ -36,6 +37,7 @@
       />
     </svg>
   </button>
+</a>
 </template>
 
 <script setup>
@@ -49,6 +51,10 @@ const props = defineProps({
   color: {
     type: String,
     required: false,
+  },
+  nonHover: {
+    type: Boolean,
+    default: false,
   },
 });
 </script>
@@ -81,6 +87,12 @@ button:hover {
   background-color: #ff5100;
   color: #fff;
 }
+
+.dark-button.no-hover:hover {
+  background-color: #242424 !important;
+  color: white !important;
+}
+
 
 button svg {
   transition: transform 0.3s ease;
