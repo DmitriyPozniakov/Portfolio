@@ -7,7 +7,7 @@
 <style lang="scss" scoped>
 div {
   position: absolute;
- 
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,9 +21,24 @@ div {
 
   z-index: 1000;
   transition: transform 0.3s ease;
+  animation: floatY 3s ease-in-out infinite;
 
-   // Добавим адаптивные стили:
-   @media (max-width: 768px) {
+  cursor: pointer;
+
+  @keyframes floatY {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  // Добавим адаптивные стили:
+  @media (max-width: 768px) {
     padding: 8px 24px;
     font-size: 1.5rem;
   }
@@ -32,13 +47,10 @@ div {
     padding: 6px 16px;
     font-size: 1.2rem;
   }
-  
 }
 
 div:hover {
   transform: translateY(-8px);
 }
-
-
 </style>
 

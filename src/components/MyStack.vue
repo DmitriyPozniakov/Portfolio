@@ -86,7 +86,7 @@ import TheCarousel from "./TheCarousel.vue";
 }
 
 .stack {
-  padding-left: 80px;
+  padding-left: 60px;
   font-size: 2rem;
   font-family: "Neutral-Medium";
   margin-bottom: 100px;

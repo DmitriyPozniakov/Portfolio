@@ -81,6 +81,7 @@ button {
   font-size: 1.6rem;
   color: #0f0f0f;
   transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
 }
 
 button:hover {

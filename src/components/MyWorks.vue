@@ -37,7 +37,7 @@
 
         <base-card
           :img-src="aiAgent"
-          :url="'https://dmitriypozniakov.github.io/Ai-agent-landing-page/'"
+          :url="'https://dmitriypozniakov.github.io/Ai-agents/'"
         >
           <template #heading>
             <p class="heading">Ai Agent</p>
@@ -63,7 +63,7 @@ import BaseCard from "./base/BaseCard.vue";
 import dolas from "@/assets/images/dolas.png";
 import abain from "@/assets/images/Abain.png";
 import timeNow from "@/assets/images/TimeNow.png";
-import aiAgent from "@/assets/images/AiAgent.png";
+import aiAgent from "@/assets/images/ai-agent-hero.png";
 import Renoteck1 from "@/assets/images/Renoteck-1.png";
 </script>
 

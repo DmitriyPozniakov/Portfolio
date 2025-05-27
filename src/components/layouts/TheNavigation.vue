@@ -5,6 +5,7 @@
       <li><a href="#hero">Home</a></li>
       <li><a href="#stack">Stack</a></li>
       <li><a href="#my-works">Portfolio</a></li>
+      <li><a href="#work-process">Work process</a></li>
       <li><a href="#footer">Contacts</a></li>
     </ul>
     <base-button class="call-to-action" :backgroundColor="'#fff'">Get in touch</base-button>
@@ -77,24 +78,12 @@ ul li:hover a {
 
 /* Стили для экранов шириной от 480px */
 @media (max-width: 480px) {
-  ul,
-  .call-to-action{
-    display: none;
-  }
-  .burger-container {
-    display: block;
-  }
+  
 }
 
 /* Стили для экранов шириной от 768px (планшеты) */
 @media (max-width: 768px) {
-  ul,
-  .call-to-action{
-    display: none;
-  }
-  .burger-container {
-    display: block;
-  }
+ 
 }
 
 /* Стили для экранов шириной от 1024px (десктопы) */

@@ -50,36 +50,43 @@ onMounted(() => {
     .pauseFor(3000)
     .deleteAll()
     .typeString(
-      `I bring <span class="functional">designs</span> to life with Vue`
+      `Building <span class="functional">Elegant</span> interfaces that feel as smooth as they look<span class="dot">.</span>`
     )
     .pauseFor(3000)
     .deleteAll()
     .start();
-
-  // Применение стилей после завершения
-  setTimeout(() => {
-    const functionalElements = document.querySelectorAll(".functional");
-    const mazokElements = document.querySelectorAll(".mazok");
-    const dotElements = document.querySelectorAll(".dot");
-
-    functionalElements.forEach((el) => {
-      el.style.fontFamily = '"Instrument"';
-      el.style.fontStyle = "italic";
-    });
-
-    mazokElements.forEach((el) => {
-      el.style.position = "relative";
-      el.style.display = "inline-block";
-      el.style.zIndex = "1";
-    });
-
-    dotElements.forEach((el) => {
-      el.style.color = "#ff5100";
-      el.style.fontFamily = '"Neutral-Regular"';
-    });
-  }, 5000);
 });
 </script>
+
+<style lang="scss">
+#typewriter-text {
+  .functional {
+    font-family: "Instrument" !important;
+    font-style: italic !important;
+  }
+
+  .mazok {
+    position: relative !important;
+    display: inline-block !important;
+    z-index: 1 !important;
+    
+    &::before {
+      content: "" !important;
+      position: absolute !important;
+      inset: 0 !important;
+      z-index: -1 !important;
+      background-size: cover !important;
+      background-position: center !important;
+      background-image: url("@/assets/images/mazok.svg") !important;
+    }
+  }
+
+  .dot {
+    color: #ff5100 !important;
+    font-family: "Neutral-Regular" !important;
+  }
+}
+</style>
 
 <style lang="scss" scoped>
 header {
