@@ -8,51 +8,39 @@
         <base-button :backgroundColor="'#242424'">Get in touch</base-button>
       </div>
       <div class="works">
-        <base-card :img-src="dolas" :url="'https://dolas-shop.netlify.app/'">
+        <base-card :img-src="dolas" :url="'https://dolas-shop.netlify.app/'" data-aos="fade-right">
           <template #heading>
             <p class="heading">Dolas</p>
           </template>
           <template #stack>Vue / Vuex / JavaScript / HTML5 / CSS3</template>
         </base-card>
 
-        <base-card
-          :img-src="abain"
-          :url="'https://dmitriypozniakov.github.io/abain/'"
-        >
+        <base-card :img-src="abain" :url="'https://dmitriypozniakov.github.io/abain/'" data-aos="fade-left">
           <template #heading>
             <p class="heading">Abain</p>
           </template>
           <template #stack>JavaScript / HTML5 / CSS3</template>
         </base-card>
 
-        <base-card
-          :img-src="timeNow"
-          :url="'https://dmitriypozniakov.github.io/Time-now/'"
-        >
+        <base-card :img-src="timeNow" :url="'https://dmitriypozniakov.github.io/Time-now/'" data-aos="fade-right">
           <template #heading>
             <p class="heading">TimeNow</p>
           </template>
           <template #stack>JavaScript / HTML5 / CSS3</template>
         </base-card>
 
-        <base-card
-          :img-src="aiAgent"
-          :url="'https://dmitriypozniakov.github.io/Ai-agents/'"
-        >
+        <base-card :img-src="aiAgent" :url="'https://dmitriypozniakov.github.io/Ai-agents/'"  data-aos="fade-left">
           <template #heading>
             <p class="heading">Ai Agent</p>
           </template>
           <template #stack>JavaScript / HTML5 / CSS3</template>
         </base-card>
 
-        <base-card :img-src="Renoteck1" :url="'https://renoteck.netlify.app/'">
+        <base-card :img-src="Renoteck1" :url="'https://renoteck.netlify.app/'" data-aos="fade-up">
           <template #heading>
             <p class="heading">Renoteck</p>
           </template>
-          <template #stack
-            >Vue / Vuex / JavaScript / HTML5 / SCSS / CSS3</template
-          ></base-card
-        >
+          <template #stack>Vue / Vuex / JavaScript / HTML5 / SCSS / CSS3</template></base-card>
       </div>
     </div>
   </div>
@@ -92,6 +80,11 @@ import Renoteck1 from "@/assets/images/Renoteck-1.png";
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 
 .heading {
@@ -107,6 +100,11 @@ import Renoteck1 from "@/assets/images/Renoteck-1.png";
   .dot {
     color: #ff5100;
   }
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+
 }
 
 .works {

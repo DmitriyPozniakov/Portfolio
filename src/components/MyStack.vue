@@ -1,13 +1,13 @@
 <template>
   <div class="wrapper" id="stack">
-    <div class="left">
+    <div class="left" data-aos="fade-down">
       <div class="image-container"></div>
-      <p class="my-info">
+      <p class="my-info" >
         Hi, I’m Dmytro — <span class="front">Frontend Developer</span
         ><span class="dot">.</span>
       </p>
     </div>
-    <p class="description">
+    <p class="description" data-aos="fade-up">
       I’m passionate about building clean, functional, and visually appealing
       websites. I focus on performance, user experience, and scalable code.
       Every project I take on is an opportunity to solve problems and create

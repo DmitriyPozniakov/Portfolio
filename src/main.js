@@ -1,6 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import './assets/fonts/styles/main.scss';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import aosConfig from './AOS-config';
 
 import BaseButton from './components/base/BaseButton.vue';
 import BaseFloating from './components/base/BaseFloating.vue';
@@ -13,3 +16,5 @@ app.component('base-floating', BaseFloating);
 app.component('base-arrow', BaseArrow);
 
 app.mount('#app');
+
+AOS.init(aosConfig);

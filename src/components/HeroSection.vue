@@ -2,7 +2,7 @@
   <header>
     <the-navigation></the-navigation>
     <div class="hero-article" id="hero">
-      <div class="hero-text-container">
+      <div class="hero-text-container" data-aos="fade-right">
         <p class="hero-heading">
           <span id="typewriter-text">
             From Figma to <span class="functional">Functional</span> — I Bring
@@ -21,7 +21,7 @@
         </div>
       </div>
 
-      <div class="hero-image-container">
+      <div class="hero-image-container" data-aos="fade-left">
         <base-floating class="first">#FrontendDeveloper</base-floating>
         <base-floating class="second">#VueDev</base-floating>
         <base-floating class="third">#VueJS</base-floating>

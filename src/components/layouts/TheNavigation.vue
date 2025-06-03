@@ -10,12 +10,34 @@
     </ul>
     <base-button class="call-to-action" :backgroundColor="'#fff'">Get in touch</base-button>
     <div class="burger-container">
-      <button class="burger">
+      <button class="burger" @click="toggleBurger">
         <img src="@/assets/images/burger.svg" alt="">
       </button>
     </div>
+    <!-- burger-menu -->
+    <div v-if="isOpen" class="burger-menu">
+      <br>
+      <ul class="burger-list">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#my-works">Portfolio</a></li>
+        <li><a href="#work-process">Work process</a></li>
+        <li><a href="#footer">Contacts</a></li>
+      </ul>
+      <base-button class="call-to-action burger-button" :backgroundColor="'#fff'">Get in touch</base-button>
+    </div>
   </nav>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+
+const isOpen = ref(false);
+
+const toggleBurger = () => {
+  isOpen.value = !isOpen.value
+}
+</script>
 
 
 <style lang="scss" scoped>
@@ -34,8 +56,8 @@ nav {
   background: #242424;
   padding: 8px 8px 8px 16px;
   border-radius: 32px;
-//   max-width: 90%;
-//   margin: 0 auto;
+  //   max-width: 90%;
+  //   margin: 0 auto;
 }
 
 .burger-container {
@@ -62,7 +84,6 @@ ul li a {
   transition: color 0.3s ease;
 }
 
-
 ul:hover li a {
   color: #7A7F7D;
 }
@@ -71,35 +92,33 @@ ul li:hover a {
   color: #fff !important;
 }
 
-/* Стили для экранов шириной от 320px */
-@media (max-width: 320px) {
 
+.burger-list {
+  display: block
 }
+
+/* Стили для экранов шириной от 320px */
+@media (max-width: 320px) {}
 
 /* Стили для экранов шириной от 480px */
-@media (max-width: 480px) {
-  
-}
+@media (max-width: 480px) {}
 
 /* Стили для экранов шириной от 768px (планшеты) */
-@media (max-width: 768px) {
- 
-}
+@media (max-width: 768px) {}
 
 /* Стили для экранов шириной от 1024px (десктопы) */
 @media (max-width: 1024px) {
-  ul,
-  .call-to-action{
+
+  ul:not(.burger-list),
+  .call-to-action {
     display: none;
   }
+
   .burger-container {
     display: block;
   }
 }
 
 /* Стили для экранов шириной от 1440px (очень большие экраны) */
-@media (max-width: 1440px) {
-
-}
-
+@media (max-width: 1440px) {}
 </style>
