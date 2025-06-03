@@ -8,39 +8,17 @@
         <base-button :backgroundColor="'#242424'">Get in touch</base-button>
       </div>
       <div class="works">
-        <base-card :img-src="dolas" :url="'https://dolas-shop.netlify.app/'" data-aos="fade-right">
+        <base-card
+          v-for="(work, index) in works"
+          :key="index"
+          :img-src="work.img"
+          :url="work.url"
+        >
           <template #heading>
-            <p class="heading">Dolas</p>
+            <p class="heading">{{ work.title }}</p>
           </template>
-          <template #stack>Vue / Vuex / JavaScript / HTML5 / CSS3</template>
+          <template #stack>{{ work.stack }}</template>
         </base-card>
-
-        <base-card :img-src="abain" :url="'https://dmitriypozniakov.github.io/abain/'" data-aos="fade-left">
-          <template #heading>
-            <p class="heading">Abain</p>
-          </template>
-          <template #stack>JavaScript / HTML5 / CSS3</template>
-        </base-card>
-
-        <base-card :img-src="timeNow" :url="'https://dmitriypozniakov.github.io/Time-now/'" data-aos="fade-right">
-          <template #heading>
-            <p class="heading">TimeNow</p>
-          </template>
-          <template #stack>JavaScript / HTML5 / CSS3</template>
-        </base-card>
-
-        <base-card :img-src="aiAgent" :url="'https://dmitriypozniakov.github.io/Ai-agents/'"  data-aos="fade-left">
-          <template #heading>
-            <p class="heading">Ai Agent</p>
-          </template>
-          <template #stack>JavaScript / HTML5 / CSS3</template>
-        </base-card>
-
-        <base-card :img-src="Renoteck1" :url="'https://renoteck.netlify.app/'" data-aos="fade-up">
-          <template #heading>
-            <p class="heading">Renoteck</p>
-          </template>
-          <template #stack>Vue / Vuex / JavaScript / HTML5 / SCSS / CSS3</template></base-card>
       </div>
     </div>
   </div>
@@ -53,7 +31,46 @@ import abain from "@/assets/images/Abain.png";
 import timeNow from "@/assets/images/TimeNow.png";
 import aiAgent from "@/assets/images/ai-agent-hero.png";
 import Renoteck1 from "@/assets/images/Renoteck-1.png";
+
+const works = [
+  {
+    img: dolas,
+    url: "https://dolas-shop.netlify.app/",
+    title: "Dolas",
+    stack: "Vue / Vuex / JavaScript / HTML5 / CSS3",
+    aos: "fade-right"
+  },
+  {
+    img: abain,
+    url: "https://dmitriypozniakov.github.io/abain/",
+    title: "Abain",
+    stack: "JavaScript / HTML5 / CSS3",
+    aos: "fade-left"
+  },
+  {
+    img: timeNow,
+    url: "https://dmitriypozniakov.github.io/Time-now/",
+    title: "TimeNow",
+    stack: "JavaScript / HTML5 / CSS3",
+    aos: "fade-right"
+  },
+  {
+    img: aiAgent,
+    url: "https://dmitriypozniakov.github.io/Ai-agents/",
+    title: "Ai Agent",
+    stack: "JavaScript / HTML5 / CSS3",
+    aos: "fade-left"
+  },
+  {
+    img: Renoteck1,
+    url: "https://renoteck.netlify.app/",
+    title: "Renoteck",
+    stack: "Vue / Vuex / JavaScript / HTML5 / SCSS / CSS3",
+    aos: "fade-up"
+  }
+];
 </script>
+
 
 <style lang="scss" scoped>
 // ОШИБКИ ПРИ АДАПТИВЕ -- ОШИБКИ ПРИ АДАПТИВЕ -- ОШИБКИ ПРИ АДАПТИВЕ
@@ -73,7 +90,6 @@ import Renoteck1 from "@/assets/images/Renoteck-1.png";
   border-radius: 40px;
   padding: 40px 40px 0 40px;
   max-height: 70rem;
-  overflow: visible;
 }
 
 .heading-wrapper {
@@ -113,5 +129,13 @@ import Renoteck1 from "@/assets/images/Renoteck-1.png";
   flex-wrap: wrap;
   gap: 20px;
   padding-top: 100px;
+  max-width: 100%;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 </style>

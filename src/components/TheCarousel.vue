@@ -92,4 +92,26 @@ const logos = [
   animation-play-state: paused;
 }
 
+/* Стили для экранов шириной от 320px */
+@media (max-width: 320px) {
+}
+
+/* Стили для экранов шириной от 480px */
+@media (max-width: 480px) {
+}
+
+/* Стили для экранов шириной от 768px (планшеты) */
+@media (max-width: 768px) {
+  .logos {
+    padding: 60px 0;
+  }
+}
+
+/* Стили для экранов шириной от 1024px (десктопы) */
+@media (max-width: 1024px) {
+}
+
+/* Стили для экранов шириной от 1440px (очень большие экраны) */
+@media (max-width: 1440px) {
+}
 </style>

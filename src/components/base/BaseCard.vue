@@ -1,5 +1,5 @@
 <template>
-  <a :href="url" target="_blank" class="card">
+  <a :href="url" target="_blank" class="card" data-aos="fade-up">
     <img :src="imgSrc" alt="" />
     <div class="container">
       <slot name="heading"></slot>
@@ -98,5 +98,4 @@ defineProps({
   align-items: center;
   margin-bottom: 20px;
 }
-
 </style>
