@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import './assets/fonts/styles/main.scss';
+import './styles/main.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import aosConfig from './AOS-config';
