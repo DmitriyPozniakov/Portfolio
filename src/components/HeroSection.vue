@@ -69,7 +69,7 @@ onMounted(() => {
     position: relative !important;
     display: inline-block !important;
     z-index: 1 !important;
-    
+
     &::before {
       content: "" !important;
       position: absolute !important;
@@ -91,7 +91,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 header {
   position: relative;
-  padding: 40px 80px;
+  padding: 100px 80px;
   z-index: 1;
   overflow-x: hidden;
 }
@@ -115,7 +115,7 @@ header::before {
 
 #typewriter-text {
   display: inline-block;
-  min-height: 26rem; 
+  min-height: 26rem;
 }
 
 .hero-text-container {
@@ -212,6 +212,7 @@ header::before {
 .hero-image-container .first {
   top: 40%;
   left: -40%;
+  transition: all 0.4s ease;
 }
 
 .hero-image-container .second {
@@ -222,6 +223,7 @@ header::before {
 .hero-image-container .third {
   bottom: 15%;
   left: 75%;
+  transition: all 0.4 ease;
 }
 
 /* Стили для экранов шириной от 320px */
@@ -231,7 +233,7 @@ header::before {
 /* Стили для экранов шириной от 480px */
 @media (max-width: 480px) {
   header {
-    padding: 20px !important;
+    padding: 60px 20px !important;
   }
   .image-container::before {
     content: "";
@@ -242,11 +244,33 @@ header::before {
 /* Стили для экранов шириной от 768px (планшеты) */
 @media (max-width: 768px) {
   header {
-    padding: 40px;
+    padding: 80px 40px;
   }
+  #typewriter-text {
+    min-height: 20rem;
+  }
+
   .image-container::before {
     content: "";
     top: -100px;
+  }
+
+  .hero-image-container .first {
+    top: 73%;
+    left: 50%;
+  }
+
+  .hero-image-container .third {
+    bottom: 65%;
+    left: -15%;
+  }
+
+  .hero-preheading {
+    margin-bottom: 30px !important;
+  }
+
+  .hero-text-container {
+    gap: 25px;
   }
 }
 

@@ -119,6 +119,21 @@ onMounted(() => {
 <style scoped lang="scss">
 .process-section {
   padding: 40px 80px 80px 80px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -300px;
+    right: -100px;
+    width: 850px;
+    height: 850px;
+    background-image: url("@/assets/images/light.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .heading {
@@ -220,7 +235,6 @@ onMounted(() => {
 
 /* Стили для экранов шириной от 320px */
 @media (max-width: 320px) {
-
   .step-container {
     gap: 80px;
   }
@@ -245,6 +259,13 @@ onMounted(() => {
 
   .step-container {
     gap: 120px;
+  }
+  .process-section {
+   
+
+    &::before {
+      top: -100px;
+    }
   }
 }
 

@@ -1,23 +1,83 @@
 <template>
   <div class="logos">
     <div class="logos-slide">
-      <div class="logo-item" v-for="(logo, index) in logos" :key="index">
-        <img :src="logo.src" :alt="logo.name" />
-        <p>{{ logo.name }}</p>
-      </div>
+      <template v-for="(logo, index) in logos" :key="index">
+        <div class="logo-item">
+          <img :src="logo.src" :alt="logo.name" />
+          <p>{{ logo.name }}</p>
+        </div>
+        <!-- Сепаратор после каждого элемента -->
+        <svg
+          class="separator"
+          xmlns="http://www.w3.org/2000/svg"
+          width="3"
+          height="107"
+          viewBox="0 0 3 107"
+          fill="none"
+        >
+          <path
+            d="M1.75 0.845154V106.572"
+            stroke="url(#paint0_linear_107_4424)"
+            stroke-width="2.29841"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_107_4424"
+              x1="2.25"
+              y1="0.845154"
+              x2="2.25"
+              y2="106.572"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#0F0F0F" />
+              <stop offset="0.476847" stop-color="#363636" />
+              <stop offset="1" stop-color="#0F0F0F" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </template>
     </div>
+
     <div class="logos-slide">
-      <div
-        class="logo-item"
-        v-for="(logo, index) in logos"
-        :key="'copy-' + index"
-      >
-        <img :src="logo.src" :alt="logo.name" />
-        <p>{{ logo.name }}</p>
-      </div>
+      <template v-for="(logo, index) in logos" :key="'copy-' + index">
+        <div class="logo-item">
+          <img :src="logo.src" :alt="logo.name" />
+          <p>{{ logo.name }}</p>
+        </div>
+        <svg
+          class="separator"
+          xmlns="http://www.w3.org/2000/svg"
+          width="3"
+          height="107"
+          viewBox="0 0 3 107"
+          fill="none"
+        >
+          <path
+            d="M1.75 0.845154V106.572"
+            stroke="url(#paint0_linear_107_4424)"
+            stroke-width="2.29841"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_107_4424"
+              x1="2.25"
+              y1="0.845154"
+              x2="2.25"
+              y2="106.572"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#0F0F0F" />
+              <stop offset="0.476847" stop-color="#363636" />
+              <stop offset="1" stop-color="#0F0F0F" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </template>
     </div>
   </div>
 </template>
+
+
 
 <script setup>
 import nuxt from "@/assets/images/nuxt.png";

@@ -38,36 +38,36 @@ const works = [
     url: "https://dolas-shop.netlify.app/",
     title: "Dolas",
     stack: "Vue / Vuex / JavaScript / HTML5 / CSS3",
-    aos: "fade-right"
+    aos: "fade-right",
   },
   {
     img: abain,
     url: "https://dmitriypozniakov.github.io/abain/",
     title: "Abain",
     stack: "JavaScript / HTML5 / CSS3",
-    aos: "fade-left"
+    aos: "fade-left",
   },
   {
     img: timeNow,
     url: "https://dmitriypozniakov.github.io/Time-now/",
     title: "TimeNow",
     stack: "JavaScript / HTML5 / CSS3",
-    aos: "fade-right"
+    aos: "fade-right",
   },
   {
     img: aiAgent,
     url: "https://dmitriypozniakov.github.io/Ai-agents/",
     title: "Ai Agent",
     stack: "JavaScript / HTML5 / CSS3",
-    aos: "fade-left"
+    aos: "fade-left",
   },
   {
     img: Renoteck1,
     url: "https://renoteck.netlify.app/",
     title: "Renoteck",
     stack: "Vue / Vuex / JavaScript / HTML5 / SCSS / CSS3",
-    aos: "fade-up"
-  }
+    aos: "fade-up",
+  },
 ];
 </script>
 
@@ -77,10 +77,10 @@ const works = [
 .wrapper {
   display: flex;
   justify-content: center;
-  padding-bottom: 170rem;
+  padding-bottom: 155rem;
 
   @media (max-width: 1452px) {
-    padding-bottom: 300rem;
+    padding-bottom: 260rem;
   }
 }
 
@@ -120,7 +120,6 @@ const works = [
   @media (max-width: 768px) {
     text-align: center;
   }
-
 }
 
 .works {
@@ -136,6 +135,15 @@ const works = [
 
   &::-webkit-scrollbar {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    text-align: center;
+  }
+  #my-works {
+    padding: 10px 10px 0 10px;
   }
 }
 </style>

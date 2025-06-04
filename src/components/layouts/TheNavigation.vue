@@ -19,14 +19,19 @@
   </nav>
   <!-- burger-menu -->
   <div v-if="isOpen" class="burger-menu">
-    <br />
+
     <ul class="burger-list">
       <li><a href="#hero">Home</a></li>
       <li><a href="#stack">Stack</a></li>
       <li><a href="#my-works">Portfolio</a></li>
+    </ul>
+    <ul class="burger-list">
       <li><a href="#work-process">Work process</a></li>
       <li><a href="#footer">Contacts</a></li>
     </ul>
+    <base-button class="call-to-action-burger" :backgroundColor="'#fff'"
+      >Get in touch</base-button
+    >
   </div>
 </template>
 <script setup>
@@ -88,7 +93,7 @@ nav {
   transition: all 0.4s ease;
   position: fixed;
   z-index: 1000;
-  width: calc(90%)
+  width: calc(90%);
 }
 
 nav.open {
@@ -119,9 +124,10 @@ ul li a {
   transition: color 0.3s ease;
 }
 
-ul:hover li a {
+ul:not(.burger-list):hover li a {
   color: #7a7f7d;
 }
+
 
 ul li:hover a {
   color: #fff !important;
@@ -136,7 +142,12 @@ ul li:hover a {
   border-radius: 0px 0px 32px 32px;
   animation: slideFadeDown 0.4s ease forwards;
   transform-origin: top center;
-  padding: 8px 8px 8px 16px;
+  padding: 24px 8px 8px 16px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  row-gap: 30px;
 
   position: fixed;
   top: calc(4px + 64px);
@@ -144,6 +155,24 @@ ul li:hover a {
   width: calc(90%);
   z-index: 999;
 }
+
+.call-to-action-burger {
+  display: none;
+}
+
+.burger-list li a {
+  font-size: clamp(1.4rem, 5vw, 3rem);
+}
+
+.burger-list li {
+  margin-bottom: 30px;
+}
+
+.burger-list li:last-child {
+  margin-bottom: 0;
+}
+
+
 
 /* Стили для экранов шириной от 320px */
 @media (max-width: 320px) {
@@ -165,6 +194,9 @@ ul li:hover a {
   }
 
   .burger-container {
+    display: block;
+  }
+  .call-to-action-burger {
     display: block;
   }
 }
