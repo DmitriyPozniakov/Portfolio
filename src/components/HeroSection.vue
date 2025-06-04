@@ -210,7 +210,7 @@ header::before {
 }
 
 .hero-image-container .first {
-  top: 40%;
+  top: 30%;
   left: -40%;
   transition: all 0.4s ease;
 }
@@ -239,6 +239,10 @@ header::before {
     content: "";
     top: -100px;
   }
+
+  .hero-preheading {
+    width: 80%;
+  }
 }
 
 /* Стили для экранов шириной от 768px (планшеты) */
@@ -256,8 +260,8 @@ header::before {
   }
 
   .hero-image-container .first {
-    top: 73%;
-    left: 50%;
+    top: 73% !important;
+    left: 50% !important;
   }
 
   .hero-image-container .third {
@@ -294,5 +298,10 @@ header::before {
 
 /* Стили для экранов шириной от 1440px (очень большие экраны) */
 @media (max-width: 1440px) {
+  .hero-image-container .first {
+    top: 50%;
+    left: -40%;
+    transition: all 0.4s ease;
+  }
 }
 </style>

@@ -110,7 +110,7 @@ import TheCarousel from "./TheCarousel.vue";
 /* Стили для экранов шириной от 768px (планшеты) */
 @media (max-width: 768px) {
  .stack {
-    padding-left: 20px;
+    padding: 30px 0 0 20px;
   }
   .wrapper {
     padding: 60px 20px 20px 20px;

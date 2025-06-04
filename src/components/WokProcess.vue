@@ -139,8 +139,8 @@ onMounted(() => {
 .heading {
   color: #fff;
   font-family: "Neutral-Regular";
-  font-size: 6.4rem;
-  margin-bottom: 120px;
+  font-size: clamp(5.5rem, 6vw, 6.4rem);
+  margin: 60px 0 120px 0;
 
   .special {
     font-family: "Instrumental";
