@@ -60,11 +60,10 @@ defineProps({
   flex-direction: column;
   justify-content: center;
 
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease;
 
   &:hover {
     background-color: #333333;
-    transform: scale(1.02);
   }
 
   img {

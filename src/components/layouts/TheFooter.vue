@@ -41,7 +41,7 @@
           </a>
         </div>
       </div>
-      <div class="right" data-aos="fade-up">
+      <div class="right" :class="{ 'hovered': isHovered }" data-aos="fade-up">
         <p class="heading">
           Your design <br />
           deserves better —
@@ -166,7 +166,14 @@ footer {
   padding: 30px;
   border-radius: 40px;
   min-width: 28rem;
-  transition: color 0.3s ease-in-out; // Плавное изменение фона и цвета
+  transition: background 0.3s ease-in-out; 
+
+   &.hovered {
+    background: #ff5100;
+    color: #fff;
+    color: #0f0f0f !important;
+
+   }
 
   &:has(.base-button:hover) {
     background: #ff5100;
@@ -182,25 +189,21 @@ footer {
     font-family: "Neutral-Regular";
     font-size: clamp(5rem, 6vw, 6.4rem);
     line-height: 120%;
-    transition: color 0.3s ease-in-out;
   }
 
   .heading-cont {
     color: inherit;
     font-size: clamp(5rem, 6vw, 6.4rem);
-    transition: color 0.3s ease-in-out;
 
     font-family: "Neutral-Regular";
     margin: 0 auto;
 
     .special {
       font-family: "Instrumental";
-      transition: color 0.3s ease-in-out;
     }
 
     .dot {
       color: #ff5100;
-      transition: color 0.3s ease-in-out;
     }
   }
 }
