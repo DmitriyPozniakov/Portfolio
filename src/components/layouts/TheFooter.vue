@@ -34,7 +34,7 @@
             </button>
           </a>
 
-          <a href="https://t.me/dima_mp5" target="_blank" rel="noopener">
+          <a href="https://t.me/pozniakov_dmytro" target="_blank" rel="noopener">
             <button class="social-media">
               <img src="@/assets/images/telegram.svg" alt="Telegram" />
             </button>
