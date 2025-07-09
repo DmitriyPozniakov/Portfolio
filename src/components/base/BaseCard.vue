@@ -1,8 +1,8 @@
 <template>
-  <a :href="url" target="_blank" class="card">
+  <a :href="url" target="_blank" class="card" data-aos="fade-up">
     <img :src="imgSrc" alt="" />
     <div class="container">
-      <slot name="heading"></slot>
+      <slot name="heading" class="heading"></slot>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="48"
@@ -53,17 +53,17 @@ defineProps({
   height: auto;
   width: clamp(32rem, 50vw, 64rem);
   flex-shrink: 0;
+  min-width: 32rem;
   flex-grow: 1;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease;
 
   &:hover {
     background-color: #333333;
-    transform: scale(1.02);
   }
 
   img {
@@ -78,13 +78,13 @@ defineProps({
   ::v-deep(.heading) {
     color: #fff;
     font-family: "Neutral-Regular";
-    font-size: 4.8rem;
+    font-size: clamp(2.8rem, 2vw + 1rem, 4.8rem);
   }
 
   .stack {
     color: #6e6e6e;
     font-family: "Neutral-Regular";
-    font-size: 2.4rem;
+    font-size: clamp(1.4rem, 2vw + 1rem, 2.4rem);
 
     span {
       color: #fff;
@@ -99,4 +99,15 @@ defineProps({
   margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .card {
+    padding: 20px;
+    width: 100% !important;
+  }
+}
 </style>

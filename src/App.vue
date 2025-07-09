@@ -10,3 +10,8 @@ import TheMain from "./components/layouts/TheMain.vue";
 import TheFooter from "./components/layouts/TheFooter.vue";
 </script>
 
+<style>
+body {
+  overflow-x: hidden;
+}
+</style>

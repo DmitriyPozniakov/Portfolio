@@ -1,7 +1,7 @@
 <template>
   <footer id="footer">
     <div class="wrapper">
-      <div class="left">
+      <div class="left" data-aos="fade-up">
         <img class="earth" src="@/assets/images/earth.png" alt="" />
         <p class="email">pozniakov.dmytroo@gmail.com</p>
         <p class="number">+380 98 518 6433</p>
@@ -41,8 +41,11 @@
           </a>
         </div>
       </div>
-      <div class="right">
-        <p class="heading">Your design <br> deserves better —</p>
+      <div class="right" :class="{ 'hovered': isHovered }" data-aos="fade-up">
+        <p class="heading">
+          Your design <br />
+          deserves better —
+        </p>
         <p class="heading-cont">
           <span class="special">let’s code</span> it right<span class="dot"
             >.</span
@@ -92,9 +95,9 @@ footer {
   flex-grow: 1;
   flex-shrink: 1;
   max-width: 50rem;
-  border-radius: 32px;
+  border-radius: 40px;
   background: #242424;
-  padding: 25px 30px;
+  padding: 30px;
 
   .earth {
     max-height: 15rem;
@@ -120,6 +123,7 @@ footer {
   .buttons {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     flex-shrink: 0;
     button {
       background-color: #fff;
@@ -161,30 +165,35 @@ footer {
   background: #fff;
   padding: 30px;
   border-radius: 40px;
-  min-width: 36rem;
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out; // Плавное изменение фона и цвета
+  min-width: 28rem;
+  transition: background 0.3s ease-in-out; 
+
+   &.hovered {
+    background: #ff5100;
+    color: #fff;
+    color: #0f0f0f !important;
+
+   }
 
   &:has(.base-button:hover) {
     background: #ff5100;
     color: #fff;
-  }
 
-  &:has(.base-button:hover) .dot {
-    color: #0f0f0f !important;
+    .dot {
+      color: #0f0f0f !important;
+    }
   }
 
   .heading {
     color: inherit;
     font-family: "Neutral-Regular";
     font-size: clamp(5rem, 6vw, 6.4rem);
-    //  font-size: 6.4rem;
     line-height: 120%;
   }
 
   .heading-cont {
     color: inherit;
     font-size: clamp(5rem, 6vw, 6.4rem);
-    // font-size: 6.4rem;
 
     font-family: "Neutral-Regular";
     margin: 0 auto;
@@ -195,7 +204,6 @@ footer {
 
     .dot {
       color: #ff5100;
-      transition: color 0.3s ease-in-out;
     }
   }
 }
@@ -223,37 +231,46 @@ footer {
 
 /* Стили для экранов шириной от 320px */
 @media (max-width: 320px) {
-
 }
 
 /* Стили для экранов шириной от 480px */
 @media (max-width: 480px) {
- 
 }
 
 /* Стили для экранов шириной от 768px (планшеты) */
 @media (max-width: 768px) {
- 
+  .copyright {
+    flex-direction: column;
+    gap: 25px;
+
+    p {
+      text-align: center;
+    }
+  }
 }
 
 /* Стили для экранов шириной от 1024px (десктопы) */
 @media (max-width: 1024px) {
- #footer {
-  padding: 15px 30px;
- }
+  #footer {
+    padding: 15px 30px;
+  }
   .wrapper {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
- }
- .right {
-  max-width: 38rem;
-  min-height: 54rem;
- }
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .left {
+    max-width: none;
+    width: 100% !important;
+    min-height: 54rem;
+  }
+  .right {
+    width: 100% !important;
+    min-height: 54rem;
+  }
 }
 
 /* Стили для экранов шириной от 1440px (очень большие экраны) */
 @media (max-width: 1440px) {
-
 }
 </style>

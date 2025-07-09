@@ -34,6 +34,7 @@ import TheCarousel from "./TheCarousel.vue";
   gap: 40px;
   flex-wrap: wrap;
   padding: 40px 80px 80px 80px;
+  overflow: hidden;
 }
 .left {
   display: flex;
@@ -95,5 +96,33 @@ import TheCarousel from "./TheCarousel.vue";
   span {
     color: #ff5100;
   }
+}
+
+/* Стили для экранов шириной от 320px */
+@media (max-width: 320px) {
+}
+
+/* Стили для экранов шириной от 480px */
+@media (max-width: 480px) {
+  
+}
+
+/* Стили для экранов шириной от 768px (планшеты) */
+@media (max-width: 768px) {
+ .stack {
+    padding: 30px 0 0 20px;
+  }
+  .wrapper {
+    padding: 60px 20px 20px 20px;
+  }
+}
+
+/* Стили для экранов шириной от 1024px (десктопы) */
+@media (max-width: 1024px) {
+ 
+}
+
+/* Стили для экранов шириной от 1440px (очень большие экраны) */
+@media (max-width: 1440px) {
 }
 </style>
