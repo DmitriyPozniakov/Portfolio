@@ -13,5 +13,6 @@ import TheFooter from "./components/layouts/TheFooter.vue";
 <style>
 body {
   overflow-x: hidden;
+  
 }
 </style>

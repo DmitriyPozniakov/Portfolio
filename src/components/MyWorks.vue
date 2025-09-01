@@ -31,6 +31,7 @@ import abain from "@/assets/images/Abain.png";
 import timeNow from "@/assets/images/TimeNow.png";
 import aiAgent from "@/assets/images/ai-agent-hero.png";
 import Renoteck1 from "@/assets/images/Renoteck-1.png";
+import Zede from "@/assets/images/Zede.png"
 
 const works = [
   {
@@ -39,6 +40,13 @@ const works = [
     title: "Dolas",
     stack: "Vue / Vuex / JavaScript / HTML5 / CSS3",
     aos: "fade-right",
+  },
+  {
+    img: Zede,
+    url: "https://deze.netlify.app/",
+    title: "Zede",
+    stack: "Vue / JavaScript / GSAP / HTML5 / CSS3",
+    aos: "fade-left",
   },
   {
     img: abain,
@@ -80,7 +88,7 @@ const works = [
   padding-bottom: 155rem;
 
   @media (max-width: 1452px) {
-    padding-bottom: 260rem;
+    padding-bottom: 320rem;
   }
 }
 
