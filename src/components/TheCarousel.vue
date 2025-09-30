@@ -82,22 +82,34 @@
 <script setup>
 import nuxt from "@/assets/images/nuxt.png";
 import vue from "@/assets/images/vue.png";
+import javaScript from "@/assets/images/javaScript.svg";
+import typeScript from "@/assets/images/typeScript.svg";
+import node from "@/assets/images/node.svg";
 import pinia from "@/assets/images/pinia.png";
-import javaScript from "@/assets/images/javaScript.png";
 import git from "@/assets/images/git.png";
 import html from "@/assets/images/html.png";
 import css from "@/assets/images/css.png";
 import scss from "@/assets/images/scss.png";
+import tailwind from "@/assets/images/tailwind.svg";
+import gsap from "@/assets/images/gsap.png";
+import swiper from "@/assets/images/swiper.svg";
+import lenis from "@/assets/images/lenis.jpg";
 
 const logos = [
   { src: nuxt, name: "Nuxt" },
   { src: vue, name: "Vue, Vuex" },
-  { src: pinia, name: "Pinia" },
   { src: javaScript, name: "JavaScript" },
+  { src: typeScript, name: "TypeScript" },
+  { src: node, name: "Node.js" },
+  { src: pinia, name: "Pinia" },
   { src: git, name: "Git" },
   { src: html, name: "HTML5" },
   { src: css, name: "CSS3" },
   { src: scss, name: "SCSS" },
+  { src: tailwind, name: "Tailwind" },
+  { src: gsap, name: "GSAP" },
+  { src: swiper, name: "Swiper" },
+  { src: lenis, name: "Lenis" },
 ];
 </script>
 
