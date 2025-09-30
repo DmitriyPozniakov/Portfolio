@@ -8,12 +8,7 @@
         <base-button :backgroundColor="'#242424'">Get in touch</base-button>
       </div>
       <div class="works">
-        <base-card
-          v-for="(work, index) in works"
-          :key="index"
-          :img-src="work.img"
-          :url="work.url"
-        >
+        <base-card v-for="(work, index) in works" :key="index" :img-src="work.img" :url="work.url">
           <template #heading>
             <p class="heading">{{ work.title }}</p>
           </template>
@@ -32,8 +27,17 @@ import timeNow from "@/assets/images/TimeNow.png";
 import aiAgent from "@/assets/images/ai-agent-hero.png";
 import Renoteck1 from "@/assets/images/Renoteck-1.png";
 import Zede from "@/assets/images/Zede.png"
+import Swap from "@/assets/images/swap.png";
+import Carentio from "@/assets/images/carentio.png"
 
 const works = [
+  {
+    img: Zede,
+    url: "https://deze.netlify.app/",
+    title: "Zede",
+    stack: "Vue / JavaScript / GSAP / HTML5 / CSS3",
+    aos: "fade-left",
+  },
   {
     img: dolas,
     url: "https://dolas-shop.netlify.app/",
@@ -42,11 +46,25 @@ const works = [
     aos: "fade-right",
   },
   {
-    img: Zede,
-    url: "https://deze.netlify.app/",
-    title: "Zede",
-    stack: "Vue / JavaScript / GSAP / HTML5 / CSS3",
-    aos: "fade-left",
+    img: Swap,
+    url: "https://swapstem.netlify.app/",
+    title: "Swap",
+    stack: "Nuxt / TypeScript / HTML5 / CSS3",
+    aos: "fade-right"
+  },
+  {
+    img: Carentio,
+    url: "https://carentio.netlify.app/",
+    title: "Swap",
+    stack: "Nuxt / TypeScript / HTML5 / Tailwind",
+    aos: "fade-left"
+  },
+  {
+    img: Renoteck1,
+    url: "https://renoteck.netlify.app/",
+    title: "Renoteck",
+    stack: "Vue / Vuex / JavaScript / HTML5 / SCSS / CSS3",
+    aos: "fade-up",
   },
   {
     img: abain,
@@ -69,13 +87,6 @@ const works = [
     stack: "JavaScript / HTML5 / CSS3",
     aos: "fade-left",
   },
-  {
-    img: Renoteck1,
-    url: "https://renoteck.netlify.app/",
-    title: "Renoteck",
-    stack: "Vue / Vuex / JavaScript / HTML5 / SCSS / CSS3",
-    aos: "fade-up",
-  },
 ];
 </script>
 
@@ -85,10 +96,10 @@ const works = [
 .wrapper {
   display: flex;
   justify-content: center;
-  padding-bottom: 155rem;
+  padding-bottom: 210rem;
 
   @media (max-width: 1452px) {
-    padding-bottom: 320rem;
+    padding-bottom: 450rem;
   }
 }
 
@@ -150,6 +161,7 @@ const works = [
   .heading {
     text-align: center;
   }
+
   #my-works {
     padding: 10px 10px 0 10px;
   }
