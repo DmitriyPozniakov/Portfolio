@@ -83,6 +83,8 @@ import TheCarousel from "./TheCarousel.vue";
   transition: all 0.3s ease;
 }
 
+
+
 .skill:hover {
   transform: scale(1.1);
   color: #fff;

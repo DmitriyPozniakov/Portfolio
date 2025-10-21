@@ -55,7 +55,7 @@ const works = [
   {
     img: Carentio,
     url: "https://carentio.netlify.app/",
-    title: "Swap",
+    title: "Carentio",
     stack: "Nuxt / TypeScript / HTML5 / Tailwind",
     aos: "fade-left"
   },

@@ -4,7 +4,6 @@
       <div class="left" data-aos="fade-up">
         <img class="earth" src="@/assets/images/earth.png" alt="" />
         <p class="email">pozniakov.dmytroo@gmail.com</p>
-        <p class="number">+380 98 518 6433</p>
         <div class="buttons">
           <a
             href="https://mail.google.com/mail/?view=cm&to=pozniakov.dmytroo@gmail.com"

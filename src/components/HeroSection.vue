@@ -24,7 +24,7 @@
       <div class="hero-image-container" data-aos="fade-left">
         <base-floating class="first">#FrontendDeveloper</base-floating>
         <base-floating class="second">#VueDev</base-floating>
-        <base-floating class="third">#VueJS</base-floating>
+        <base-floating class="third">#Nuxt</base-floating>
         <div class="image-container"></div>
       </div>
     </div>
